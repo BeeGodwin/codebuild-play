@@ -6,6 +6,7 @@ phases:
       nodejs: 12
     commands:
       - echo "installing stuff"
+      - yarn install
   pre_build:
     commands:
       - echo "pre-build commands"
