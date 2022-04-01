@@ -1,0 +1,9 @@
+{
+    "assets": [
+        {
+            "key": "someImg",
+            "type": "image",
+            "path": "shared/some-img.png"
+        }
+    ]
+}
