@@ -6,12 +6,12 @@ phases:
       nodejs: 14
     commands:
       - echo "installing stuff"
-  pre-build:
+  pre_build:
     commands:
       - echo "pre-build commands"
   build:
     commands:
       - echo "build commands"
-  post-build:
+  post_build:
     commands:
       - echo "post-build commands"
