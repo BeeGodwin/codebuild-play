@@ -14,4 +14,4 @@ phases:
       - yarn build
   post_build:
     commands:
-      - yarn push:s3
+      - yarn put:s3

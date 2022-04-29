@@ -12,6 +12,7 @@ module.exports = merge(base, {
     maxEntrypointSize: 1100000,
     maxAssetSize: 1100000,
   },
+  devServer: undefined,
   optimization: {
     minimizer: [
       new TerserPlugin({
