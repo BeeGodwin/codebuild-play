@@ -6,7 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 // const process = require('process');
 
-const prefix = process.env.PHASER_ENV === 'dev' ? '' : 'hello-world/';
+// const prefix = process.env.PHASER_ENV === 'dev' ? '' : 'hello-world/';
 
 module.exports = {
     entry: './src/index.js',
@@ -40,7 +40,7 @@ module.exports = {
             root: path.resolve(__dirname, '../'),
         }),
         new CopyPlugin({
-            patterns: [{ from: 'src/assets', to: `${prefix}assets` }],
+            patterns: [{ from: 'src/assets', to: `./assets` }],
         }),
         new webpack.DefinePlugin({
             CANVAS_RENDERER: JSON.stringify(true),

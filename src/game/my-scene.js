@@ -13,6 +13,6 @@ export default class MyScene extends Scene {
   }
 
   update(time, deltaTime) {
-    // this.sprite.setPosition((this.origin.x + time) % WIDTH, HEIGHT / 2);
+    this.sprite.setPosition((400 + time) % WIDTH, HEIGHT / 2);
   }
 }
