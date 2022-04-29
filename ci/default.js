@@ -1,3 +1,6 @@
 module.exports = {
-  aws: { prefix: "hello-world" }
+  aws: {
+    bucketName: "ibeeco.de",
+    prefix: "hello-world",
+  }
 }

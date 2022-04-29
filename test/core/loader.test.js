@@ -2,7 +2,6 @@ import Loader from '../../src/core/loader';
 import atlas from '../../src/assets/atlas';
 import mockAtlas from '../mock/assets/atlas';
 import mockPack from '../mock/assets/shared/mock-pack.json';
-import config from '../../ci/default';
 
 jest.mock('../../src/assets/atlas');
 
