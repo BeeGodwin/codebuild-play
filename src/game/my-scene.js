@@ -1,23 +1,20 @@
-import Scene from '../core/scene';
-// import { eventEmitter } from '../core/events';
+import Scene from "../core/scene";
+
+const WIDTH = 1000;
+const HEIGHT = 600;
 
 export default class MyScene extends Scene {
-    constructor() {
-        super('MyScene');
-    }
+  constructor() {
+    super("MyScene");
+  }
 
-    create() {
-        this.add.image(400, 300, 'helloWorld.logoImg');
+  create() {
+    this.origin = { x: 400, y: 300};
+    this.sprite = this.add.sprite(origin.x, origin.y, "helloWorld.logoImg");
+  }
 
-        // const emitter = eventEmitter();
-        // const rect = this.add.rectangle(100, 100, 100, 100, 0xffffff, 1);
-        // emitter.on('TOGGLE_RECT', () => rect.setFillStyle(0xff0000, 1));
-
-        // eventFirer();
-    }
+  update(time, deltaTime) {
+    this.sprite.setPosition((this.origin.x + time) % WIDTH, HEIGHT / 2);
+  }
 }
 
-// const eventFirer = () => {
-//     const emitter = eventEmitter();
-//     emitter.emit('TOGGLE_RECT');
-// };
