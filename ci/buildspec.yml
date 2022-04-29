@@ -15,7 +15,3 @@ phases:
   post_build:
     commands:
       - yarn push:s3
-artifacts:
-  files:
-    - '**/*'
-  base-directory: 'dist'
