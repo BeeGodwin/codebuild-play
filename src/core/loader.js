@@ -17,7 +17,7 @@ const runLoader = (scene) => {
   atlas
     .getAll()
     .forEach((pack) =>
-      scene.load.json(pack.key, `${config.aws.prefix}/assets/${pack.path}`)
+      scene.load.json(pack.key, `assets/${pack.path}`)
     );
   scene.load.start();
   scene.load.once("complete", () => {
@@ -34,7 +34,7 @@ const loadAssets = (scene) => {
     packJson.assets.forEach((asset) => {
       scene.load.image(
         `${pack.prefix}.${asset.key}`,
-        `${config.aws.prefix}/assets/${asset.path}`
+        `assets/${asset.path}`
       );
     });
   });
