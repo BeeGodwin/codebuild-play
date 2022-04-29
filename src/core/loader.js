@@ -27,10 +27,13 @@ const runLoader = (scene) => {
   );
 };
 
+// something with loader.path?
+
 const loadAssets = (scene) => {
   atlas.getAll().forEach((pack) => {
     const packJson = scene.cache.json.get(pack.key);
     packJson.assets.forEach((asset) => {
+      console.log("BEEBUG: loading: ", `${scene.load.path}/assets/${asset.path} => ${pack.prefix}.${asset.key}`)
       scene.load.image(
         `${pack.prefix}.${asset.key}`,
         `assets/${asset.path}`
