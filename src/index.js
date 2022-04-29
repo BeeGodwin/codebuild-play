@@ -1,12 +1,12 @@
 import "phaser";
-import config from "./config/default-config";
+import config from "./config/default";
 import game from "./game";
 import Boot from "./core/boot";
 import Loader from "./core/loader";
 
 class Game extends Phaser.Game {
   constructor() {
-    super(config.phaser);
+    super(config.phaserConfig);
     this.scene.add("Boot", Boot);
     this.scene.add("Loader", Loader);
     game.scenes.forEach((cfg) => this.scene.add(cfg.key, cfg.scene));
