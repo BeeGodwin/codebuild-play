@@ -47,7 +47,7 @@ describe('Loader', () => {
             test('loads images as per json', () => {
                 expect(loader.load.image).toHaveBeenCalledWith(
                     'bar.someImg',
-                    `assets/shared/some-img.png`
+                    `http://localhost/assets/shared/some-img.png`
                 );
             });
         });
