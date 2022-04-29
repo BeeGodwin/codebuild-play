@@ -1,9 +1,11 @@
 import "phaser";
+import { aws } from '../../ci/default'
 
 export default {
-  phaser: {
+  phaserConfig: {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
   },
+  aws,
 };
