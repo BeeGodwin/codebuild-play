@@ -17,4 +17,5 @@ phases:
       - echo "post-build commands"
 artifacts:
   files:
-    - 'dist/**/*'
+    - '**/*'
+    base-directory: 'dist'
