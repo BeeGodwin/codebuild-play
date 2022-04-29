@@ -58,5 +58,5 @@
   "repository": "git@github.com:BeeGodwin/codebuild-play.git",
   "author": "Bee Godwin <bee.godwin@bbc.co.uk>",
   "license": "MIT",
-  "private": false
+  "private": true
 }
