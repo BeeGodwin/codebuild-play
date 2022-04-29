@@ -2,6 +2,7 @@ import Loader from '../../src/core/loader';
 import atlas from '../../src/assets/atlas';
 import mockAtlas from '../mock/assets/atlas';
 import mockPack from '../mock/assets/shared/mock-pack.json';
+import config from '../../ci/default';
 
 jest.mock('../../src/assets/atlas');
 
@@ -47,7 +48,7 @@ describe('Loader', () => {
             test('loads images as per json', () => {
                 expect(loader.load.image).toHaveBeenCalledWith(
                     'bar.someImg',
-                    '/assets/shared/some-img.png'
+                    `${config.aws.prefix}/assets/shared/some-img.png`
                 );
             });
         });
