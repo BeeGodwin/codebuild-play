@@ -3,12 +3,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
-const config = require("../ci/default");
-
-const isDevEnv = process.env.PHASER_ENV === "dev";
-console.log("BEEBUG: isDevEnv: ", isDevEnv);
-const prefix = isDevEnv ? `${config.aws.prefix}/` : "";
-console.log("BEEBUG: prefix: ", prefix);
 
 module.exports = {
   entry: "./src/index.js",

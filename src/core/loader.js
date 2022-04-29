@@ -1,6 +1,5 @@
 import "phaser";
 import atlas from "../assets/atlas";
-import config from "../config/default";
 const GAME_TOP = 2; // index of first non generic scene
 
 export default class Loader extends Phaser.Scene {
