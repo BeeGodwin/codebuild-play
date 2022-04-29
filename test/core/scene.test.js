@@ -1,15 +1,15 @@
-// import Scene from '../../src/core/scene';
+import Scene from '../../src/core/scene';
 
 describe('Scene', () => {
-    // let scene;
+    let scene;
 
     beforeEach(() => {
-        // scene = new Scene();
+        scene = new Scene();
     });
 
     describe("doesn't do anything yet", () => {
         test('so just has a stub test', () => {
-            expect(true).toBe(true);
+            expect(scene.foo()).toEqual('bar');
         });
     });
 });
