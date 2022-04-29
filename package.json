@@ -5,15 +5,15 @@
   "main": "index.js",
   "scripts": {
     "build": "rm -rf dist && webpack --config webpack/prod.js",
-    "clean": "rm -rf node_modules && rm -f package-lock.json && npm install",
+    "clean": "rm -rf node_modules && rm -f yarn.lock && yarn install",
     "format": "prettier --write \"src/**/*.js\"",
     "host": "http-server dist",
     "lint": "eslint \"./src/**/*.js\" --quiet",
     "publish": "npm run clean && npm run build && npm run s3:put",
     "s3:put": "node publish/aws-put.js",
     "s3:list": "node publish/aws-list.js",
-    "start": "PHASER_ENV=dev webpack-dev-server --config webpack/base.js",
-    "start:build": "PHASER_ENV=dev npm run build && npm run host",
+    "dev": "PHASER_ENV=dev webpack-dev-server --config webpack/base.js",
+    "dev:dist": "PHASER_ENV=dev yarn build && yarn host",
     "test": "jest --no-coverage",
     "test:cov": "jest --coverage"
   },
