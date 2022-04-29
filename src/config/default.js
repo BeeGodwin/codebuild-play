@@ -1,5 +1,5 @@
 import "phaser";
-import { aws } from '../../ci/default'
+import { aws } from "../../ci/default";
 
 export default {
   phaserConfig: {

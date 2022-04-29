@@ -15,9 +15,7 @@ export default class Loader extends Phaser.Scene {
 const runLoader = (scene) => {
   atlas
     .getAll()
-    .forEach((pack) =>
-      scene.load.json(pack.key, `assets/${pack.path}`)
-    );
+    .forEach((pack) => scene.load.json(pack.key, assetUrl(pack.path)));
   scene.load.start();
   scene.load.once("complete", () => {
     loadAssets(scene);
@@ -31,11 +29,10 @@ const loadAssets = (scene) => {
   atlas.getAll().forEach((pack) => {
     const packJson = scene.cache.json.get(pack.key);
     packJson.assets.forEach((asset) => {
-      scene.load.image(
-        `${pack.prefix}.${asset.key}`,
-        `assets/${asset.path}`
-      );
+      scene.load.image(`${pack.prefix}.${asset.key}`, assetUrl(asset.path));
     });
   });
   scene.load.start();
 };
+
+const assetUrl = (suffix) => `${window.location.href}assets/${suffix}`;

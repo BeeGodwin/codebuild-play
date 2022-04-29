@@ -9,9 +9,10 @@
     "format": "prettier --write \"src/**/*.js\"",
     "host": "http-server dist",
     "lint": "eslint \"./src/**/*.js\" --quiet",
-    "push:s3": "node publish/put-to-s3.js",
+    "put:s3": "node publish/put-to-s3.js",
     "dev": "PHASER_ENV=dev webpack-dev-server --config webpack/base.js",
     "dev:dist": "PHASER_ENV=dev yarn build && yarn host",
+    "dev:put:s3": "yarn build && yarn put:s3",
     "test": "jest --no-coverage",
     "test:cov": "jest --coverage"
   },
@@ -47,7 +48,7 @@
   },
   "dependencies": {
     "lodash-es": "^4.17.20",
-    "phaser": "^3.50.0"
+    "phaser": "^3.55.0"
   },
   "jest": {
     "verbose": true,
