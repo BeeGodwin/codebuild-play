@@ -48,7 +48,7 @@ describe('Loader', () => {
             test('loads images as per json', () => {
                 expect(loader.load.image).toHaveBeenCalledWith(
                     'bar.someImg',
-                    `${config.aws.prefix}/assets/shared/some-img.png`
+                    `assets/shared/some-img.png`
                 );
             });
         });

@@ -42,7 +42,7 @@ module.exports = {
       root: path.resolve(__dirname, "../"),
     }),
     new CopyPlugin({
-      patterns: [{ from: "src/assets", to: `./${prefix}/assets` }],
+      patterns: [{ from: "src/assets", to: `./assets` }],
     }),
     new webpack.DefinePlugin({
       CANVAS_RENDERER: JSON.stringify(true),
