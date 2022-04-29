@@ -5,14 +5,15 @@ phases:
     runtime-versions:
       nodejs: 12
     commands:
-      - echo "installing stuff"
+      - echo "===INSTALL PHASE==="
       - yarn install
   pre_build:
     commands:
-      - echo "pre-build commands"
+      - echo "===<TEST PHASE>==="
+      - yarn test:cov
   build:
     commands:
-      - echo "build commands"
+      - echo "===<BUILD PHASE>==="
       - yarn build
   post_build:
     commands:
