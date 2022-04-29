@@ -9,12 +9,10 @@ export default class MyScene extends Scene {
   }
 
   create() {
-    this.origin = { x: 400, y: 300};
-    this.sprite = this.add.sprite(origin.x, origin.y, "helloWorld.logoImg");
+    this.sprite = this.add.sprite(400, 300, "helloWorld.logoImg");
   }
 
   update(time, deltaTime) {
-    this.sprite.setPosition((this.origin.x + time) % WIDTH, HEIGHT / 2);
+    // this.sprite.setPosition((this.origin.x + time) % WIDTH, HEIGHT / 2);
   }
 }
-
